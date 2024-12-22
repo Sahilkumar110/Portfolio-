@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Kumar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            background-color: #0b142c;
+            color: #f8f9fa;
+        }
+        .navbar-brand {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .navbar-brand:hover {
+            transform: scale(1.1);
+            color: #ff8566;
+        }
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff8566;
+            text-shadow: 0 2px 8px rgba(255, 133, 102, 0.7);
+        }
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color: #0b142c;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image12.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            text-align: center;
+            color: #f8f9fa;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            color: #007bff;
+        }
+        .project-card {
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #1c1f2e;
+            color: #f8f9fa;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background: linear-gradient(135deg, #0e1b36, #1b2a49);
+            color: #f8f9fa;
+            padding: 20px 0;
+            font-size: 0.95rem;
+            border-top: 2px solid #007bff;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 0;
+        }
+        .footer-left {
+            text-align: left;
+        }
+        .footer-center {
+            text-align: center;
+        }
+        .footer-right {
+            text-align: right;
+        }
+        .footer a {
+            color: #00acee;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .footer a:hover {
+            color: 1 d9bf0;
+            text-shadow: 0 0 10px rgba(29, 155, 240, 0.7);
+        }
+        .footer .social-icons {
+            display: inline-flex;
+            gap: 15px;
+        }
+        .footer .social-icons a {
+            color: #f8f9fa;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .footer .social-icons a:hover {
+            transform: scale(1.2);
+            color: #00acee;
+        }
+        .footer-right a {
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .footer-right a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .section-padding {
+            padding-top: 50px;
+        }
+        :target {
+    scroll-margin-top: 20px;
+}
+#pic:hover {
+            transform: scale(1.05);
+        }
+ .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #pic{
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="font-size: 1.8rem; color: #f8f9fa;">Sahil Kumar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="hero">
+        <div style="margin-left: 70px;">
+            <h1 class="fade-in">Hi, I'm <span class="text-primary">Sahil Kumar</span></h1>
+            <p class="fade-in">Web Developer | Frontend Specialist</p>
+            <a href="#contact" class="btn btn-primary btn-lg mt-4 fade-in">Hire Me</a>
+        </div>
+    </section>
+    <section id="about" class="container my-5 section-padding fade-in">
+        <h2 class="section-title">About Me</h2>
+        <div class="container row align-items-center">
+            <div class="col-md-6">
+                <img src="image2.jpg" alt="Sahil Kumar" class="img-fluid" id="pic">
+            </div>
+            <div class="col-md-5">
+                <p style="text-align: justify;">Hello, I am <a href="#" style="color: white;">Sahil Kumar</a>, a web developer passionate about building beautiful, responsive, and user-friendly websites. With a strong foundation in HTML, CSS, JavaScript, and Bootstrap, I am eager to deliver high-quality web solutions.</p>
+                <p style="text-align: justify;">In addition to web development, I have skills in Java, Python, and C, enabling me to work on diverse technical challenges and craft efficient solutions.</p>
+                <p style="text-align: justify;">Currently pursuing my Bachelor's in Computer Science at the <a href="https://tiest.neduet.edu.pk/" style="color: white;">Thar Institute of Engineering Science and Technology</a> <a href="https://www.neduet.edu.pk/" style="color: white;">(NED University)</a>, I have an ever-growing interest in exploring advanced web technologies, data analysis, and machine learning. My academic projects and internships reflect my problem-solving abilities, attention to detail, and enthusiasm for innovation.</p>
+                <p style="text-align: justify;">I am always excited to collaborate on projects that combine creativity and technology to solve real-world problems. Let’s build something amazing together!</p>
+                <a href="CVResume.pdf" class="btn btn-dark">Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="container py-5 section-padding fade-in" style="background-color: #0b142c; margin-top: 20px;">
+        <h2 class="section-title">My Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-3 text-center">
+                <i class="fab fa-java" style="font-size: 80px; color: #007396;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #007396;">Java</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-python" style="font-size: 80px; color: #3776ab;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #3776ab;">Python</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fas fa-code" style="font-size: 80px; color: #4f5b93;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #4f5b93;">C</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fas fa-database" style="font-size: 80px; color: #f29111;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #f29111;">SQL</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-html5" style="font-size: 80px; color: #e34c26;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #e34c26;">HTML</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-css3-alt" style="font-size: 80px; color: #1572b6;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #1572b6;">CSS</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-js" style="font-size: 80px; color: #f7df1e;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #f7df1e;">JavaScript</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-bootstrap" style="font-size: 80px; color: #7952b3;"></i>
+                <p style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #7952b3;">Bootstrap</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="container my-5 section-padding fade-in">
+        <h2 class="section-title">My Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card" style="height: 100%;">
+                    <img src="project1.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Krishna Jeweller's</h5>
+                        <p class="card-text">E-commerce website for Krishna Jeweller's.</p>
+                        <a href="https://deluxe-cupcake-1eb434.netlify.app/" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card" style="height: 100%;">
+                    <img src="project2.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Image Gallery</h5>
+                        <p class="card-text">Modern and interactive image gallery.</p>
+                        <a href="https://sahilkumar110.github.io/Image-Gallery-/" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card" style="height: 100%;">
+                    <img src="project3.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Calculator</h5>
+                        <p class="card-text">Responsive calculator using HTML, CSS, and JavaScript.</p>
+                        <a href="https://sahilkumar110.github.io/Calculator/" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="text-light py-5 col-md-5 container d-flex justify-content-center align-items-center section-padding" style="min-height: 100vh; border-radius: 10%;">
+        <div class="container">
+            <h2 class="section-title text-white"> Contact Me</h2>
+            <form class="contact-form" onsubmit="return validateForm()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" rows="4" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>Copyright © 2024 Sahil Kumar. All rights reserved.</p>
+                </div>
+                <div class="footer-center">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/sahil-kumar-a5a616321" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Sahilkumar110" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:sahilhirani999@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>Contact: +923313615520 | Email: <a href="mailto:sahilhirani999@gmail.com">sahilhirani999@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+            return true;
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        const sections = document.querySelectorAll('.fade-in');
+        const options = {
+            root: null,
+            threshold: 0.1,
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
